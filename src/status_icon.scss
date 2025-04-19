@@ -1,0 +1,108 @@
+#rectMask rect {
+  width: 2;
+  height: 5;
+  fill: pink;
+}
+
+#circleMask circle {
+  fill: white;
+  cx: 0.5px;
+  cy: 0.5px;
+  r: 0.5px;
+}
+
+$star-thickness: 15%;
+
+#app-mount {
+  #svg-mask-avatar-status-round-80 {
+    & circle[fill="black"] {
+      
+      clip-path: polygon(
+        50% 0%,
+        100% 0%,
+        100% 100%,
+        0% 100%,
+        0% 50%,
+        
+      );
+
+    }
+  }
+
+ask-status-online {
+    & circle {
+      r: 0.6;
+      clip-path: polygon(
+          50% 0%,                                      // top
+          calc(50% + $star-thickness) calc(50% - $star-thickness), // upper right
+          100% 50%,                                    // right
+          calc(50% + $star-thickness) calc(50% + $star-thickness), // lower right
+          50% 100%,                                    // bottom
+          calc(50% - $star-thickness) calc(50% + $star-thickness), // lower left
+          0% 50%,                                      // left
+          calc(50% - $star-thickness) calc(50% - $star-thickness)  // upper left
+      );
+    }
+  }
+	.wrapper__44b0c {
+
+    // & .cursorDefault__44b0c > rect[fill="#40a258"] {
+    //   mask: url(#svg-mask-status-online);
+    //   width: 15px;
+    // }
+
+    // & g > svg > mask > rect[x='7.5'] {
+    //   // transform: scale(1, 1) translate(14.5, 17);
+    //   // transform: scale(0.8) translate(26px, 26px) !important;
+    //   clip-path: polygon(
+    //     50% 0%,                                      // top
+    //     calc(50% + $star-thickness) calc(50% - $star-thickness), // upper right
+    //     100% 50%,                                    // right
+    //     calc(50% + $star-thickness) calc(50% + $star-thickness), // lower right
+    //     50% 100%,                                    // bottom
+    //     calc(50% - $star-thickness) calc(50% + $star-thickness), // lower left
+    //     0% 50%,                                      // left
+    //     calc(50% - $star-thickness) calc(50% - $star-thickness)  // upper left
+    // );
+    // }
+
+    & g > svg > rect[fill="#40a258"] {
+      // transform: scale(1, 1) translate(14.5, 17);
+      // transform: scale(0.8) translate(26px, 26px) !important;
+      width: 11px;
+      height: 11px;
+      x: 4px;
+      y: 4px;
+      // clip-path: polygon(
+      //   50% 0%,                                      // top
+      //   calc(50% + $star-thickness) calc(50% - $star-thickness), // upper right
+      //   100% 50%,                                    // right
+      //   calc(50% + $star-thickness) calc(50% + $star-thickness), // lower right
+      //   50% 100%,                                    // bottom
+      //   calc(50% - $star-thickness) calc(50% + $star-thickness), // lower left
+      //   0% 50%,                                      // left
+      //   calc(50% - $star-thickness) calc(50% - $star-thickness)  // upper left
+      // );
+    }
+    
+    & rect[mask="url(#svg-mask-status-online)"] {
+      width: calc(30%);
+      height: calc(30%);
+      // height: 12px;
+      x: 21;
+      // y: 21;
+      // transform: scale(1.1);
+      clip-path: polygon(
+        50% 0%,                                      // top
+        calc(50% + $star-thickness) calc(50% - $star-thickness), // upper right
+        100% 50%,                                    // right
+        calc(50% + $star-thickness) calc(50% + $star-thickness), // lower right
+        50% 100%,                                    // bottom
+        calc(50% - $star-thickness) calc(50% + $star-thickness), // lower left
+        0% 50%,                                      // left
+        calc(50% - $star-thickness) calc(50% - $star-thickness)  // upper left
+      );
+    }
+    
+  }
+}
