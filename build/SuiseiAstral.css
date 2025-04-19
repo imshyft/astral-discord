@@ -5,58 +5,25 @@
  * @description Based on Clearvision around Suisei's aesthetic, using Nak.kiwi's Unshittify
  * @source https://github.com/ClearVision/ClearVision-v6 
 */
-@use "sass:color";
-
 @import "https://clearvision.github.io/ClearVision-v6/main.css";
-@import url('https://mairiosipla.github.io/unshittify-discord/UnShittifySource.theme.css');
-
-// ---------------------------------------------
-// Color Variables
-// ---------------------------------------------
-$theme-text: #dce4fe;
-$theme-text-subtle: #B3B0C4;
-$theme-background: #1a1a1a;
-$theme-primary: #927b5d;
-$theme-secondary: #122754;
-$theme-accent: #294464;
-
-
-// ---------------------------------------------
-// Clearvision Variables
-// ---------------------------------------------
+@import url("https://mairiosipla.github.io/unshittify-discord/UnShittifySource.theme.css");
 :root {
-  // --theme-text: #dce4fe;
-  // --theme-text-subtle: #B3B0C4;
-  // --theme-background: #1a1a1a;
-  // --theme-primary: #b48e66;  
-  // --theme-secondary: #122754; 
-  // --theme-accent: #294464;
-
-
-  // Typography
-  --text-normal: #{$theme-text};
+  --text-normal: #dce4fe;
   --main-font: gg sans;
   --code-font: Consolas;
-
-  --main-color: #{$theme-primary};
+  --main-color: #927b5d;
   --hover-color: #7D674C;
   --success-color: #183970;
   --danger-color: #F44336;
   --url-color: var(--main-color);
-
-  // Presence Colors
   --online-color: #43b581;
   --idle-color: #faa61a;
   --dnd-color: #982929;
   --streaming-color: #593695;
   --offline-color: #808080;
-
-  // Layout Sizes
   --channels-width: 220px;
   --members-width: 240px;
-
-  // Background Settings
-  --background-image: url('https://raw.githubusercontent.com/imshyft/astral-discord/refs/heads/master/assets/bg-astrolabe.png');
+  --background-image: url("https://raw.githubusercontent.com/imshyft/astral-discord/refs/heads/master/assets/bg-astrolabe.png");
   --background-shading: 85%;
   --background-position: center;
   --background-size: cover;
@@ -69,9 +36,7 @@ $theme-accent: #294464;
   --background-invert: 0%;
   --background-blur: 0px;
   --background-overlay: rgba(0,0,0,0.69);
-
-  // User Popout
-  --user-popout-image: url('https://raw.githubusercontent.com/imshyft/astral-discord/refs/heads/master/assets/bg-radial.png');
+  --user-popout-image: url("https://raw.githubusercontent.com/imshyft/astral-discord/refs/heads/master/assets/bg-radial.png");
   --user-popout-position: top;
   --user-popout-size: cover;
   --user-popout-repeat: no-repeat;
@@ -82,9 +47,7 @@ $theme-accent: #294464;
   --user-popout-grayscale: 0%;
   --user-popout-invert: 0%;
   --user-popout-blur: 6px;
-
-  // User Modal
-  --user-modal-image: url('https://raw.githubusercontent.com/imshyft/astral-discord/refs/heads/master/assets/bg-radial.png');
+  --user-modal-image: url("https://raw.githubusercontent.com/imshyft/astral-discord/refs/heads/master/assets/bg-radial.png");
   --user-modal-position: center;
   --user-modal-size: cover;
   --user-modal-repeat: no-repeat;
@@ -95,18 +58,12 @@ $theme-accent: #294464;
   --user-modal-grayscale: 0%;
   --user-modal-invert: 0%;
   --user-modal-blur: 3px;
-
-  // Home Icon
-  --home-icon: url('https://raw.githubusercontent.com/imshyft/astral-discord/refs/heads/master/assets/icon.png');
+  --home-icon: url("https://raw.githubusercontent.com/imshyft/astral-discord/refs/heads/master/assets/icon.png");
   --home-position: center;
   --home-size: 40px;
-
-  // Channel Colors
   --channel-unread: #E9CBA9;
   --channel-color: rgba(159, 131, 98, 1);
   --muted-color: rgba(159, 131, 98, 0.61);
-
-  // Backdrop
   --backdrop-overlay: rgba(0, 0, 0, 0.8);
   --backdrop-image: var(--background-image);
   --backdrop-position: var(--background-position);
@@ -120,120 +77,94 @@ $theme-accent: #294464;
   --backdrop-grayscale: var(--background-grayscale);
   --backdrop-sepia: var(--background-sepia);
   --backdrop-blur: var(--background-blur);
-
-  // Button Colors
   --bd-blue: var(--main-color);
   --bd-blue-hover: var(--hover-color);
   --bd-blue-active: var(--hover-color);
 }
 
-
-
-// Add friend 
 .addFriend__133bf:not(:hover) {
-  background-color: color.scale($theme-primary, $lightness: -40%)!important;
+  background-color: rgb(87.6, 73.8, 55.8) !important;
 }
 
 .addFriend__133bf:hover {
-  background-color: color.scale($theme-primary, $lightness: -70%) !important;
+  background-color: rgb(43.8, 36.9, 27.9) !important;
 }
 
-
-// ---------------------------------------------
-// Drag Areas
-// ---------------------------------------------
 .nicknames__488b1.overflow__82b15 {
   -webkit-app-region: drag;
 }
+
 .children__9293f {
   -webkit-app-region: drag;
-  * {
-    -webkit-app-region: no-drag;
-  }
+}
+.children__9293f * {
+  -webkit-app-region: no-drag;
 }
 
-// fix __ is typing position
 .typing_b88801.base_b88801 {
   bottom: 6px;
   left: 75px;
 }
 
-// ---------------------------------------------
-// Avatar Status Container
-// ---------------------------------------------
-
-// remove clearvision's placeholder avatar status text
 .avatar__37e49::after {
   content: "" !important;
 }
+
 .avatar__37e49:hover foreignObject {
   opacity: 1 !important;
 }
-// align status container to server channel list
+
 .container__37e49 {
   padding-left: calc(var(--space-xs) - 2px);
 }
 
-
 .carouselModal_d3a6f0 {
   margin-top: 44px;
 }
+
 .textArea__74017 {
   margin-left: 0px;
 }
 
-// Moving search bar for Unshittify window drag box
 .searchBar__97492 {
   margin-right: 20px !important;
 }
 
-// Call view background
 .wrapper_cb9592.noChat_cb9592.video_cb9592 {
   background: rgba(0, 0, 0, 0.6);
 }
+
 .root_bfe55a {
   background: none !important;
 }
 
-// Friends panel background
 .tabBody__133bf {
   background-color: rgba(0, 0, 0, 0.8) !important;
 }
+
 .peopleColumn__133bf {
   background: transparent;
 }
 
-// Show activity panel within vertical monitor width
 @media (max-width: 1200px) {
-  #online-tab {
-    + {
-      div {
-        display: block !important;
-      }
-    }
+  #online-tab + div {
+    display: block !important;
   }
 }
 @media (max-width: 1000px) {
-  #online-tab {
-    + {
-      div {
-        display: none !important;
-      }
-    }
+  #online-tab + div {
+    display: none !important;
   }
 }
-
-
-// default background darkness
 .page_c48ade {
   background-color: rgba(0, 0, 0, 0.4);
   transition: background-color 1s ease;
 }
-// friends tab darkness
-.page_c48ade:has(div[aria-label="Friends"]) {
+
+.page_c48ade:has(div[aria-label=Friends]) {
   background-color: rgba(0, 0, 0, 0.6);
 }
-// clear usual element for friend tab opacity
+
 .tabBody__133bf {
   background-color: transparent !important;
 }
