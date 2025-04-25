@@ -152,6 +152,19 @@ $theme-accent: #294464;
   }
 }
 
+.trailing_c38106 {
+  -webkit-app-region: drag;
+  & > * {
+    -webkit-app-region: no-drag;
+  }
+}
+
+.winButtons_c38106.winButtonsWithDivider_c38106 {
+  -webkit-app-region: drag;
+  & > * {
+    -webkit-app-region: no-drag;
+  }
+}
 // fix __ is typing position
 .typing_b88801.base_b88801 {
   bottom: 6px;
@@ -182,10 +195,6 @@ $theme-accent: #294464;
   margin-left: 0px;
 }
 
-// Moving search bar for Unshittify window drag box
-.searchBar__97492 {
-  margin-right: 20px !important;
-}
 
 // Call view background
 .wrapper_cb9592.noChat_cb9592.video_cb9592 {
@@ -236,4 +245,15 @@ $theme-accent: #294464;
 // clear usual element for friend tab opacity
 .tabBody__133bf {
   background-color: transparent !important;
+}
+
+// TEMP fix for modal image not appearing (no filters)
+#popout_43{
+  background: var((--user-modal-image));
+  background-position: var((--user-modal-position));
+}
+
+.user-profile-modal {
+  background-image: var((--user-popout-image)) !important;
+  background-position: var((--user-popout-position));
 }
