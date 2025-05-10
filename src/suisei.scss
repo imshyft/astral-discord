@@ -3,11 +3,11 @@
  * @author shyft
  * @version 6.9.0
  * @description Based on Clearvision around Suisei's aesthetic, using Nak.kiwi's Unshittify
- * @source https://github.com/ClearVision/ClearVision-v6 
+ * @source https://github.com/imshyft/astral-discord
 */
 @use "sass:color";
 
-@import "https://clearvision.github.io/ClearVision-v6/main.css";
+@import "https://clearvision.github.io/ClearVision-v7/main.css";
 @import url('https://mairiosipla.github.io/unshittify-discord/UnShittifySource.theme.css');
 
 // ---------------------------------------------
@@ -85,7 +85,7 @@ $theme-accent: #294464;
 
   // User Modal
   --user-modal-image: url('https://raw.githubusercontent.com/imshyft/astral-discord/refs/heads/master/assets/bg-radial.png');
-  --user-modal-position: center;
+  --user-modal-position: bottom;
   --user-modal-size: cover;
   --user-modal-repeat: no-repeat;
   --user-modal-attachment: fixed;
@@ -95,7 +95,6 @@ $theme-accent: #294464;
   --user-modal-grayscale: 0%;
   --user-modal-invert: 0%;
   --user-modal-blur: 3px;
-
   // Home Icon
   --home-icon: url('https://raw.githubusercontent.com/imshyft/astral-discord/refs/heads/master/assets/icon.png');
   --home-position: center;
@@ -247,13 +246,8 @@ $theme-accent: #294464;
   background-color: transparent !important;
 }
 
-// TEMP fix for modal image not appearing (no filters)
-#popout_43{
-  background: var((--user-modal-image));
-  background-position: var((--user-modal-position));
-}
 
-.user-profile-modal {
-  background-image: var((--user-popout-image)) !important;
-  background-position: var((--user-popout-position));
+// Hide Clear vision banner
+.bar_c38106 > .leading_c38106 {
+  display: none;
 }

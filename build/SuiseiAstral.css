@@ -3,9 +3,9 @@
  * @author shyft
  * @version 6.9.0
  * @description Based on Clearvision around Suisei's aesthetic, using Nak.kiwi's Unshittify
- * @source https://github.com/ClearVision/ClearVision-v6 
+ * @source https://github.com/imshyft/astral-discord
 */
-@import "https://clearvision.github.io/ClearVision-v6/main.css";
+@import "https://clearvision.github.io/ClearVision-v7/main.css";
 @import url("https://mairiosipla.github.io/unshittify-discord/UnShittifySource.theme.css");
 :root {
   --text-normal: #dce4fe;
@@ -48,7 +48,7 @@
   --user-popout-invert: 0%;
   --user-popout-blur: 6px;
   --user-modal-image: url("https://raw.githubusercontent.com/imshyft/astral-discord/refs/heads/master/assets/bg-radial.png");
-  --user-modal-position: center;
+  --user-modal-position: bottom;
   --user-modal-size: cover;
   --user-modal-repeat: no-repeat;
   --user-modal-attachment: fixed;
@@ -101,6 +101,20 @@
   -webkit-app-region: no-drag;
 }
 
+.trailing_c38106 {
+  -webkit-app-region: drag;
+}
+.trailing_c38106 > * {
+  -webkit-app-region: no-drag;
+}
+
+.winButtons_c38106.winButtonsWithDivider_c38106 {
+  -webkit-app-region: drag;
+}
+.winButtons_c38106.winButtonsWithDivider_c38106 > * {
+  -webkit-app-region: no-drag;
+}
+
 .typing_b88801.base_b88801 {
   bottom: 6px;
   left: 75px;
@@ -124,10 +138,6 @@
 
 .textArea__74017 {
   margin-left: 0px;
-}
-
-.searchBar__97492 {
-  margin-right: 20px !important;
 }
 
 .wrapper_cb9592.noChat_cb9592.video_cb9592 {
@@ -168,3 +178,9 @@
 .tabBody__133bf {
   background-color: transparent !important;
 }
+
+.bar_c38106 > .leading_c38106 {
+  display: none;
+}
+
+/*# sourceMappingURL=Astral.css.map */
