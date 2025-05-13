@@ -251,3 +251,8 @@ $theme-accent: #294464;
 .bar_c38106 > .leading_c38106 {
   display: none;
 }
+
+// Make User Area opaque
+.sidebar_c48ade > .panels_c48ade {
+  bottom: 0px !important;
+}
